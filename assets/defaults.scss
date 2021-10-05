@@ -1,11 +1,36 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
+:root {
+  --font-size-base: 16px;
+  --spacing-base: 8px;
+  --text-white: #fff;
+  --bg-main: #111;
+  --bg-button: tomato;
+  --bg-button-hover: firebrick;
+}
 
-  .app {
-    background-color: #111111;
-    min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.app {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding: var(--spacing-base) calc(var(--spacing-base) *2);
+  background-color: var(--bg-button);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: var(--bg-button-hover);
   }
+}
