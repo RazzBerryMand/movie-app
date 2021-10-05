@@ -20,6 +20,12 @@
             }}
           </p>
           <p class="rating">Rating: {{ movie.vote_average }}</p>
+          <NuxtLink
+            :to="{ name: 'movies-movieid', params: { movieid: movie.id } }"
+            class="button"
+          >
+            More info
+          </NuxtLink>
         </div>
       </div>
     </div>
